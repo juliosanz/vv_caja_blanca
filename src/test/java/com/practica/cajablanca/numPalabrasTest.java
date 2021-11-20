@@ -39,6 +39,7 @@ public class numPalabrasTest {
 		});
 	}
 	
+<<<<<<< HEAD
 	// path4
 	@Test
 	public void numPalabrasTestPath4()
@@ -46,4 +47,14 @@ public class numPalabrasTest {
 		editor.leerFichero("path4.txt");
 		assertEquals(0, editor.numPalabras(5, 3, null));
 	}
+=======
+	// path 3
+	@Test
+	public void numPalabrasTestPath3()
+	{
+		int apariciones = editor.numPalabras(1, 0, null);
+		assertEquals(apariciones, 0);
+	}
+
+>>>>>>> 9406d0e7b8e64272f9b3d0be6ababfd5bfc834bb
 }
