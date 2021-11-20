@@ -1,5 +1,6 @@
 package com.practica.cajablanca;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThrows;
 
 import org.junit.Test;
@@ -36,5 +37,13 @@ public class numPalabrasTest {
 		assertThrows(IllegalArgumentException.class, () -> {
 			editor.numPalabras(1, 3, null);
 		});
+	}
+	
+	// path4
+	@Test
+	public void numPalabrasTestPath4()
+	{
+		editor.leerFichero("path4.txt");
+		assertEquals(0, editor.numPalabras(5, 3, null));
 	}
 }
