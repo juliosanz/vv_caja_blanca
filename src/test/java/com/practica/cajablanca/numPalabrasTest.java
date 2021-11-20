@@ -1,5 +1,6 @@
 package com.practica.cajablanca;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThrows;
 
 import org.junit.Test;
@@ -37,4 +38,13 @@ public class numPalabrasTest {
 			editor.numPalabras(1, 3, null);
 		});
 	}
+	
+	// path 3
+	@Test
+	public void numPalabrasTestPath3()
+	{
+		int apariciones = editor.numPalabras(1, 0, null);
+		assertEquals(apariciones, 0);
+	}
+
 }
