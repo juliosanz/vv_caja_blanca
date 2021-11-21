@@ -12,6 +12,7 @@ import com.cajanegra.EmptyCollectionException;
 public class MayorLongitudPruebas {
 
   private static Editor editor;
+  private static final String SOURCE_PATH = "./src/test/misc/mayorLongitud/";
 
   @BeforeAll
   public static void init() {
@@ -29,7 +30,7 @@ public class MayorLongitudPruebas {
 //PATH3
   @Test
   public void mayorLongTestPath2() {
-    editor.leerFichero("MayorLongitudPath3.txt");
+    editor.leerFichero(SOURCE_PATH + "MayorLongitudPath3.txt");
     assertThrows(EmptyCollectionException.class, () -> {
       editor.mayorLongitud();
     });
@@ -38,7 +39,7 @@ public class MayorLongitudPruebas {
 //PATH5
   @Test
   public void mayorLongTestPath5() {
-    editor.leerFichero("MayorLongitudPath5.txt");
+    editor.leerFichero(SOURCE_PATH + "MayorLongitudPath5.txt");
     try {
       assertEquals(editor.mayorLongitud(), "HOLA");
     } catch (EmptyCollectionException e) {
@@ -50,7 +51,7 @@ public class MayorLongitudPruebas {
 //Extra1
   @Test
   public void mayorLongTestExtra1() {
-    editor.leerFichero("MayorLongitudExtra1.txt");
+    editor.leerFichero(SOURCE_PATH + "MayorLongitudExtra1.txt");
     try {
       assertEquals(editor.mayorLongitud(), "ADIOS");
     } catch (EmptyCollectionException e) {
@@ -62,7 +63,7 @@ public class MayorLongitudPruebas {
 //Extra2
   @Test
   public void mayorLongTestExtra2() {
-    editor.leerFichero("MayorLongitudExtra2.txt");
+    editor.leerFichero(SOURCE_PATH + "MayorLongitudExtra2.txt");
     try {
       assertEquals(editor.mayorLongitud(), "ADIOS");
     } catch (EmptyCollectionException e) {
@@ -74,7 +75,7 @@ public class MayorLongitudPruebas {
 //Extra3
   @Test
   public void mayorLongTestExtra3() {
-    editor.leerFichero("MayorLongitudExtra3.txt");
+    editor.leerFichero(SOURCE_PATH + "MayorLongitudExtra3.txt");
     try {
       assertEquals(editor.mayorLongitud(), "HOLAADIOS");
     } catch (EmptyCollectionException e) {
