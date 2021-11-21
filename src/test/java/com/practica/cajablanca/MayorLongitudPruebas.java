@@ -2,6 +2,7 @@ package com.practica.cajablanca;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.Assert;
 import org.junit.jupiter.api.BeforeAll;
@@ -29,11 +30,12 @@ public class MayorLongitudPruebas {
 
 //PATH3
   @Test
-  public void mayorLongTestPath2() {
+  public void mayorLongTestPath3() {
     editor.leerFichero(SOURCE_PATH + "MayorLongitudPath3.txt");
-    assertThrows(EmptyCollectionException.class, () -> {
-      editor.mayorLongitud();
-    });
+    try{assertTrue(editor.mayorLongitud()=="null");
+    } catch (EmptyCollectionException e) {
+    	Assert.fail();
+    }
   }
 
 //PATH5
@@ -43,7 +45,6 @@ public class MayorLongitudPruebas {
     try {
       assertEquals(editor.mayorLongitud(), "HOLA");
     } catch (EmptyCollectionException e) {
-      e.printStackTrace();
       Assert.fail();
     }
   }
