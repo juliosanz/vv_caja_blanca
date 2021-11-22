@@ -32,7 +32,7 @@ public class MayorLongitudPruebas {
   @Test
   public void mayorLongTestPath3() {
     editor.leerFichero(SOURCE_PATH + "MayorLongitudPath3.txt");
-    try{assertTrue(editor.mayorLongitud()=="null");
+    try{assertTrue(editor.mayorLongitud().equals(""));
     } catch (EmptyCollectionException e) {
     	Assert.fail();
     }
