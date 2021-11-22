@@ -1,20 +1,19 @@
 package com.practica.cajablanca;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertThrows;
 
-import org.junit.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+
 import org.junit.jupiter.api.BeforeAll;
-
-import com.practica.cajablanca.Editor;
+import org.junit.jupiter.api.Test;
 
 public class numPalabrasTest {
 	
-	Editor editor;
+	static Editor editor;
 	
-	@Test
 	@BeforeAll
-	public void init()
+	public static void init()
 	{
 		editor = new Editor();
 	}
@@ -54,5 +53,4 @@ public class numPalabrasTest {
 		editor.leerFichero("path4.txt");
 		assertEquals(0, editor.numPalabras(5, 3, null));
 	}
-
 }
