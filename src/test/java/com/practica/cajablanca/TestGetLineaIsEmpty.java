@@ -26,6 +26,9 @@ public class TestGetLineaIsEmpty {
     assertThrows(EmptyCollectionException.class, () -> {
       editor.getLinea(0);
     });
+    assertThrows(EmptyCollectionException.class, () -> {
+      editor.getLinea(1);
+    });
   }
 
   @Test
@@ -53,7 +56,7 @@ public class TestGetLineaIsEmpty {
   }
 
   @Test
-  public void testIsEmnpty() {
+  public void testIsEmpty() {
     assertTrue(editor.editIsEmpty());
     editor.leerFichero(SOURCE_PATH + "TestGetLinea.txt");
     assertFalse(editor.editIsEmpty());
