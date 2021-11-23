@@ -53,6 +53,7 @@ public class PruebaSustituirPalabra {
 		assertEquals(linea2, editor.getLinea(2).toString());
 
 	}
+	
 	// PRUEBAS EXTRA
 	@ParameterizedTest(name="prueba {index}")
 	@CsvSource(delimiter=':', value= {
@@ -69,9 +70,6 @@ public class PruebaSustituirPalabra {
 		}
 
 	}
-
-	
-
 	
 	/*path 4*/
 	@Test
@@ -80,15 +78,17 @@ public class PruebaSustituirPalabra {
 		editor.sustituirPalabra("foo", "palabra");
 		assertEquals("[palabra]", editor.getLinea(1).toString());		
 	}
+	
 	/*path 5*/
 	@Test
 	public void five() throws EmptyCollectionException {
 		editor.leerFichero("path5.txt");
-		
 		String linea1=editor.getLinea(1).toString();
 		editor.sustituirPalabra("palabra", "any");
 		assertEquals(linea1, editor.getLinea(1).toString());
 		
 	}
+	
+	
 	
 }
