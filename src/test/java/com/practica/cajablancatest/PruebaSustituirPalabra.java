@@ -57,8 +57,8 @@ public class PruebaSustituirPalabra {
 	// PRUEBAS EXTRA
 	@ParameterizedTest(name="prueba {index}")
 	@CsvSource(delimiter=':', value= {
-		"extra1.txt:[foo, foo1, foo2]:[foo3, foo4]:[foo5, changed]:[foo6, foo7, foo8]",
-		"extra2.txt:[foo1, changed, changed]:[foo2, changed]:[foo3, changed]:[changed, changed, foo4]"
+		"extra1sustituir.txt:[foo, foo1, foo2]:[foo3, foo4]:[foo5, changed]:[foo6, foo7, foo8]",
+		"extra2sustituir.txt:[foo1, changed, changed]:[foo2, changed]:[foo3, changed]:[changed, changed, foo4]"
 	})
 	public void extra( ArgumentsAccessor args) throws ArgumentAccessException, EmptyCollectionException {
 		//String arrayDeLineas[]=new String[editor.size()];
