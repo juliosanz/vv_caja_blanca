@@ -15,7 +15,7 @@ import org.omg.CORBA.PRIVATE_MEMBER;
 import com.cajanegra.AbstractSingleLinkedListImpl;
 import com.cajanegra.EmptyCollectionException;
 import com.cajanegra.SingleLinkedListImpl;
-// import com.practica.cajablanca.Editor;
+import com.practica.cajablanca.Editor;
 
 
 public class SustituirPalabraTest {
