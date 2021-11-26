@@ -14,9 +14,9 @@ import org.junit.jupiter.params.provider.CsvSource;
 import com.cajanegra.AbstractSingleLinkedListImpl;
 import com.cajanegra.SingleLinkedListImpl;
 
-public class pruebasCajaNegra {
+public class sizeTest {
 
-	private static AbstractSingleLinkedListImpl<AbstractSingleLinkedListImpl<String>> editor;
+	private static Editor testEditor;
 	private static SingleLinkedListImpl<String> unElemento;
 
 	
@@ -29,14 +29,14 @@ public class pruebasCajaNegra {
 	@Test
 	@BeforeAll
 	static void setUp() {
-	editor = new SingleLinkedListImpl<AbstractSingleLinkedListImpl<String>>();	
-	unElemento = new SingleLinkedListImpl<String>("A");
+		testEditor = new Editor();	
+		unElemento = new SingleLinkedListImpl<String>("A");
 	}
 	
 	@Test
 	@BeforeEach
 	public void init() {
-		editor = new SingleLinkedListImpl<AbstractSingleLinkedListImpl<String>>();	
+		testEditor = new Editor();	
 		unElemento = new SingleLinkedListImpl<String>("A");
 		
 	}	
@@ -44,17 +44,17 @@ public class pruebasCajaNegra {
 	@DisplayName("Testea size Parametrizado")
 	@ParameterizedTest()
 	@CsvSource({
-	"3",
-	"2",
-	"1",
-	"0"
+	"3,size3.txt",
+	"2,size2.txt",
+	"1,size1.txt",
+	"0,"
 	})
-	public void sizeTest(int key) {
+	public void sizeTest(int key, String txt) {
 		if(key == 0) {
-			assertEquals(0, editor.size());
+			assertEquals(0, testEditor.size());
 		} else {
-		editor.addNTimes(unElemento, key);
-		assertEquals(key, editor.size());
+		testEditor.leerFichero(txt);
+		assertEquals(key, testEditor.size());
 		}
 	}
 	

@@ -26,17 +26,20 @@ import com.cajanegra.SingleLinkedListImpl;
 public class numPalabrasTest {
 	
 	static Editor editor;
+	static SingleLinkedListImpl<String> unElemento;
 	
 	@BeforeAll
 	public static void init()
 	{
 		editor = new Editor();
+		unElemento = new SingleLinkedListImpl<String>("A");
 	}
 	
 	@BeforeEach
 	public void update()
 	{
 		editor = new Editor();
+		unElemento = new SingleLinkedListImpl<String>("A");
 	}
 
 	// path1
