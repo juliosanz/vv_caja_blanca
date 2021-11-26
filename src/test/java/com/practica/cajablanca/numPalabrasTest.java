@@ -58,7 +58,7 @@ public class numPalabrasTest {
 		});
 	}
 	
-	// path 3
+	// path3
 	@Test
 	public void numPalabrasTestPath3()
 	{
@@ -72,6 +72,28 @@ public class numPalabrasTest {
 	{
 		editor.leerFichero("path4.txt");
 		assertEquals(0, editor.numPalabras(5, 3, null));
+	}
+	
+	// path5
+	@Test
+	public void numPalabrasExtraTestPath5() {
+		editor.leerFichero("path5.txt");
+		assertEquals(0,editor.numPalabras(1,2,null));
+		//como aseguramos que pos sea 3?
+	}
+	
+	// path 6
+	@Test
+	public void numPalabrasExtraTestPath6() {
+		editor.leerFichero("path6.txt");
+		assertEquals(1,editor.numPalabras(1,2,"yoshi"));
+	}
+	
+	// path 7
+	@Test
+	public void numPalabrasExtraTestPath7() {
+		editor.leerFichero("path7.txt");
+		assertEquals(0,editor.numPalabras(1,2,"noAparece"));
 	}
 	
 	@Test
