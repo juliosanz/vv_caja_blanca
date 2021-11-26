@@ -13,11 +13,11 @@ import org.junit.jupiter.api.Test;
 import com.cajanegra.EmptyCollectionException;
 import com.cajanegra.SingleLinkedListImpl;
 import com.practica.cajablanca.Editor;
-import com.practica.cajablanca.Utilidad;
 
 public class LeerFicheroTest {
 
 	static Editor editor;
+	private static final String SOURCE_PATH = "./src/test/misc/LeerFicheroTest/";
 	
 	@BeforeAll
 	public static void init()
@@ -34,10 +34,8 @@ public class LeerFicheroTest {
 		String[] testLine3 = {"adipisicing", "elit"};
 		String[][] tests = {testLine1, testLine2, testLine3};
 		
-		String fileTest = "Lorem ipsum dolor\r\nsit amet consectetur\r\nadipisicing elit";
-		String fileName = "leerFicheroPrueba.txt";
 		
-		editor = Utilidad.leerFichero(fileName, fileTest);
+		editor.leerFichero(SOURCE_PATH + "leerFichero.txt");
 		
 		for(int i = 1; i < 4; i++)
 		{

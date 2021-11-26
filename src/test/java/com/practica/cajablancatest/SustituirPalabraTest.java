@@ -21,7 +21,7 @@ import com.practica.cajablanca.Editor;
 public class SustituirPalabraTest {
 
 	private Editor editor= new Editor();
-	private static final String SOURCE_PATH = "./src/test/misc/PruebaSustituirPalabra/";
+	private static final String SOURCE_PATH = "./src/test/misc/SustituirPalabraTest/";
 	
 	/*path 1*/
 	@Test

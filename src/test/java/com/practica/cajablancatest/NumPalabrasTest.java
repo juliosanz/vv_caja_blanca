@@ -21,7 +21,6 @@ import com.cajanegra.AbstractSingleLinkedListImpl;
 import com.cajanegra.EmptyCollectionException;
 import com.cajanegra.SingleLinkedListImpl;
 import com.practica.cajablanca.Editor;
-import com.practica.cajablanca.Utilidad;
 
 
 
@@ -29,6 +28,7 @@ public class NumPalabrasTest {
 	
 	static Editor editor;
 	static SingleLinkedListImpl<String> unElemento;
+	private static final String SOURCE_PATH = "./src/test/misc/NumPalabrasTest/";
 	
 	@BeforeAll
 	public static void init()
@@ -57,8 +57,7 @@ public class NumPalabrasTest {
 	@Test
 	public void numPalabrasTestPath2()
 	{
-		editor = Utilidad.leerFichero("path2.txt", "yoshi\r\n"
-				+ "universal");
+		editor.leerFichero(SOURCE_PATH + "paths.txt");
 		assertThrows(IllegalArgumentException.class, () -> {
 			editor.numPalabras(1, 3, null);
 		});
@@ -76,24 +75,14 @@ public class NumPalabrasTest {
 	@Test
 	public void numPalabrasTestPath4()
 	{
-		editor = Utilidad.leerFichero("path4.txt", "1\r\n"
-				+ "2\r\n"
-				+ "3\r\n"
-				+ "4\r\n"
-				+ "5\r\n"
-				+ "6\r\n"
-				+ "7\r\n"
-				+ "8\r\n"
-				+ "9\r\n"
-				+ "10");
+		editor.leerFichero(SOURCE_PATH + "path4.txt");
 		assertEquals(0, editor.numPalabras(5, 3, null));
 	}
 	
 	// path5
 	@Test
 	public void numPalabrasExtraTestPath5() {
-		editor = Utilidad.leerFichero("path5.txt", "yoshi\r\n"
-				+ "universal");
+		editor.leerFichero(SOURCE_PATH + "paths.txt");
 		assertEquals(0,editor.numPalabras(1,2,null));
 		//como aseguramos que pos sea 3?
 	}
@@ -101,16 +90,14 @@ public class NumPalabrasTest {
 	// path 6
 	@Test
 	public void numPalabrasExtraTestPath6() {
-		editor = Utilidad.leerFichero("path6.txt", "yoshi\r\n"
-				+ "universal");
+		editor.leerFichero(SOURCE_PATH + "paths.txt");
 		assertEquals(1,editor.numPalabras(1,2,"yoshi"));
 	}
 	
 	// path 7
 	@Test
 	public void numPalabrasExtraTestPath7() {
-		editor = Utilidad.leerFichero("path7.txt", "yoshi\r\n"
-				+ "universal");
+		editor.leerFichero(SOURCE_PATH + "paths.txt");
 		assertEquals(0,editor.numPalabras(1,2,"noAparece"));
 	}
 }
