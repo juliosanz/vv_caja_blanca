@@ -26,40 +26,17 @@ public class leerFicheroTest {
 	@Test
 	public void leerFicheroTest()
 	{
-		String fileName = "leerFicheroPrueba.txt";
-		File file = new File(fileName);
 		
 		String[] testLine1 = {"Lorem", "ipsum", "dolor"};
 		String[] testLine2 = {"sit", "amet", "consectetur"};
 		String[] testLine3 = {"adipisicing", "elit"};
 		String[][] tests = {testLine1, testLine2, testLine3};
 		
-		String fileString = "Lorem ipsum dolor\r\nsit amet consectetur\r\nadipisicing elit";
-		FileWriter fw = null;
-		BufferedWriter bw = null;
-		try
-		{
-			fw = new FileWriter(file);
-			bw = new BufferedWriter(fw);
-			bw.write(fileString);
-		}
-		catch(IOException e)
-		{
-			e.printStackTrace();
-		}
-		finally
-		{
-			try
-			{
-				bw.close();
-			}
-			catch (IOException e)
-			{
-				e.printStackTrace();
-			}
-		}
-		editor.leerFichero(fileName);
-		file.delete();
+		String fileTest = "Lorem ipsum dolor\r\nsit amet consectetur\r\nadipisicing elit";
+		String fileName = "leerFicheroPrueba.txt";
+		
+		editor = Utilidad.leerFichero(fileName, fileTest);
+		
 		for(int i = 1; i < 4; i++)
 		{
 			try

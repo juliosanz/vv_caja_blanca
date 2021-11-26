@@ -55,7 +55,8 @@ public class numPalabrasTest {
 	@Test
 	public void numPalabrasTestPath2()
 	{
-		editor.leerFichero("path2.txt");
+		editor = Utilidad.leerFichero("path2.txt", "yoshi\r\n"
+				+ "universal");
 		assertThrows(IllegalArgumentException.class, () -> {
 			editor.numPalabras(1, 3, null);
 		});
@@ -73,14 +74,24 @@ public class numPalabrasTest {
 	@Test
 	public void numPalabrasTestPath4()
 	{
-		editor.leerFichero("path4.txt");
+		editor = Utilidad.leerFichero("path4.txt", "1\r\n"
+				+ "2\r\n"
+				+ "3\r\n"
+				+ "4\r\n"
+				+ "5\r\n"
+				+ "6\r\n"
+				+ "7\r\n"
+				+ "8\r\n"
+				+ "9\r\n"
+				+ "10");
 		assertEquals(0, editor.numPalabras(5, 3, null));
 	}
 	
 	// path5
 	@Test
 	public void numPalabrasExtraTestPath5() {
-		editor.leerFichero("path5.txt");
+		editor = Utilidad.leerFichero("path5.txt", "yoshi\r\n"
+				+ "universal");
 		assertEquals(0,editor.numPalabras(1,2,null));
 		//como aseguramos que pos sea 3?
 	}
@@ -88,14 +99,16 @@ public class numPalabrasTest {
 	// path 6
 	@Test
 	public void numPalabrasExtraTestPath6() {
-		editor.leerFichero("path6.txt");
+		editor = Utilidad.leerFichero("path6.txt", "yoshi\r\n"
+				+ "universal");
 		assertEquals(1,editor.numPalabras(1,2,"yoshi"));
 	}
 	
 	// path 7
 	@Test
 	public void numPalabrasExtraTestPath7() {
-		editor.leerFichero("path7.txt");
+		editor = Utilidad.leerFichero("path7.txt", "yoshi\r\n"
+				+ "universal");
 		assertEquals(0,editor.numPalabras(1,2,"noAparece"));
 	}
 }
