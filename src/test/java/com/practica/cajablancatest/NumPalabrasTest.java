@@ -1,4 +1,4 @@
-package com.practica.cajablanca;
+package com.practica.cajablancatest;
 
 
 
@@ -20,10 +20,12 @@ import org.junit.jupiter.api.Test;
 import com.cajanegra.AbstractSingleLinkedListImpl;
 import com.cajanegra.EmptyCollectionException;
 import com.cajanegra.SingleLinkedListImpl;
+import com.practica.cajablanca.Editor;
+import com.practica.cajablanca.Utilidad;
 
 
 
-public class numPalabrasTest {
+public class NumPalabrasTest {
 	
 	static Editor editor;
 	static SingleLinkedListImpl<String> unElemento;

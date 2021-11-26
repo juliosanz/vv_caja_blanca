@@ -1,4 +1,4 @@
-package com.practica.cajablanca;
+package com.practica.cajablancatest;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -13,12 +13,14 @@ import org.junit.jupiter.params.provider.CsvSource;
 
 import com.cajanegra.AbstractSingleLinkedListImpl;
 import com.cajanegra.SingleLinkedListImpl;
+import com.practica.cajablanca.Editor;
 
-public class sizeTest {
+public class SizeTest {
 
 	private static Editor testEditor;
 	private static SingleLinkedListImpl<String> unElemento;
 
+	private static final String SOURCE_PATH = "./src/test/misc/SizeTest/";
 	
 	/*
 	 * En el beforeAll asignamos valores al hashMap que usaremos
@@ -53,7 +55,7 @@ public class sizeTest {
 		if(key == 0) {
 			assertEquals(0, testEditor.size());
 		} else {
-		testEditor.leerFichero(txt);
+		testEditor.leerFichero(SOURCE_PATH + txt);
 		assertEquals(key, testEditor.size());
 		}
 	}

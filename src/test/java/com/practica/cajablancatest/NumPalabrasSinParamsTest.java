@@ -11,7 +11,7 @@ import org.junit.jupiter.params.provider.CsvSource;
 
 import com.cajanegra.EmptyCollectionException;
 
-public class numPalabrasSinParams {
+public class NumPalabrasSinParamsTest {
 	
 	Editor editor= new Editor();
 	private static final String SOURCE_PATH = "./src/test/misc/numPalabrasSinParams/";

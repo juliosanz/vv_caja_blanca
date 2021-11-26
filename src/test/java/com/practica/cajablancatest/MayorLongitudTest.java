@@ -1,4 +1,4 @@
-package com.practica.cajablanca;
+package com.practica.cajablancatest;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
@@ -9,8 +9,9 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import com.cajanegra.EmptyCollectionException;
+import com.practica.cajablanca.Editor;
 
-public class MayorLongitudPruebas {
+public class MayorLongitudTest {
 
   private static Editor editor;
   private static final String SOURCE_PATH = "./src/test/misc/mayorLongitud/";

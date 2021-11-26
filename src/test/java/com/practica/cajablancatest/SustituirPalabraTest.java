@@ -18,7 +18,7 @@ import com.cajanegra.SingleLinkedListImpl;
 // import com.practica.cajablanca.Editor;
 
 
-public class PruebaSustituirPalabra {
+public class SustituirPalabraTest {
 
 	private Editor editor= new Editor();
 	private static final String SOURCE_PATH = "./src/test/misc/PruebaSustituirPalabra/";

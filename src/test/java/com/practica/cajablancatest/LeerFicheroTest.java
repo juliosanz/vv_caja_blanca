@@ -1,4 +1,4 @@
-package com.practica.cajablanca;
+package com.practica.cajablancatest;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -12,8 +12,10 @@ import org.junit.jupiter.api.Test;
 
 import com.cajanegra.EmptyCollectionException;
 import com.cajanegra.SingleLinkedListImpl;
+import com.practica.cajablanca.Editor;
+import com.practica.cajablanca.Utilidad;
 
-public class leerFicheroTest {
+public class LeerFicheroTest {
 
 	static Editor editor;
 	

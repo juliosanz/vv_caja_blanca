@@ -1,16 +1,18 @@
-package com.practica.cajablanca;
+package com.practica.cajablancatest;
 
 import static org.junit.Assert.assertTrue;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.fail;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import com.cajanegra.EmptyCollectionException;
+import com.practica.cajablanca.Editor;
 
-public class TestGetLineaIsEmpty {
+public class GetLineaIsEmptyTest {
 
   private static Editor editor;
   // refactorizar la cte de abajo para centralizarla en otra clase TODO
@@ -49,10 +51,17 @@ public class TestGetLineaIsEmpty {
   @Test
   public void testGetLineaRangoValido() throws Exception {
     editor.leerFichero(SOURCE_PATH + "TestGetLinea.txt");
-    assertEquals(editor.getLinea(0).toString(), "[HOLA, ADIOS]");
-    assertEquals(editor.getLinea(1).toString(), "[HOLAADIOS]");
-    assertEquals(editor.getLinea(editor.size() - 1).toString(), "[]");
-    assertEquals(editor.getLinea(editor.size()).toString(), "[IPSUM]");
+    try {
+	    assertEquals(editor.getLinea(0).toString(), "[HOLA, ADIOS]");
+	    assertEquals(editor.getLinea(1).toString(), "[HOLAADIOS]");
+	    assertEquals(editor.getLinea(editor.size() - 1).toString(), "[]");
+	    assertEquals(editor.getLinea(editor.size()).toString(), "[IPSUM]");
+    }
+    catch(IllegalArgumentException e)
+    {
+    	fail("IllegalArgumentException");
+    }
+
   }
 
   @Test
