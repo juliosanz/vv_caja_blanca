@@ -27,7 +27,6 @@ public class PruebaSustituirPalabra {
 	@Test
 	public void emptyEditor() throws EmptyCollectionException {
 
-		System.out.println(editor.editIsEmpty()); 
 		editor.sustituirPalabra("any", "any1");
 		assertTrue(editor.editIsEmpty());
 		
@@ -54,6 +53,25 @@ public class PruebaSustituirPalabra {
 
 	}
 	
+	
+	/*path 4*/
+	@Test
+	public void oneListOneWordChanged() throws EmptyCollectionException {
+		editor.leerFichero("path4.txt");
+		editor.sustituirPalabra("foo", "palabra");
+		assertEquals("[palabra]", editor.getLinea(1).toString());		
+	}
+	
+	/*path 5*/
+	@Test
+	public void oneListNoWordChanged() throws EmptyCollectionException {
+		editor.leerFichero("path5.txt");
+		String linea1=editor.getLinea(1).toString();
+		editor.sustituirPalabra("palabra", "any");
+		assertEquals(linea1, editor.getLinea(1).toString());
+		
+	}
+	
 	// PRUEBAS EXTRA
 	@ParameterizedTest(name="prueba {index}")
 	@CsvSource(delimiter=':', value= {
@@ -61,7 +79,6 @@ public class PruebaSustituirPalabra {
 		"extra2sustituir.txt:[foo1, changed, changed]:[foo2, changed]:[foo3, changed]:[changed, changed, foo4]"
 	})
 	public void extra( ArgumentsAccessor args) throws ArgumentAccessException, EmptyCollectionException {
-		//String arrayDeLineas[]=new String[editor.size()];
 		editor.leerFichero(args.getString(0));
 		editor.sustituirPalabra("target", "changed");
 		
@@ -71,23 +88,7 @@ public class PruebaSustituirPalabra {
 
 	}
 	
-	/*path 4*/
-	@Test
-	public void four() throws EmptyCollectionException {
-		editor.leerFichero("path4.txt");
-		editor.sustituirPalabra("foo", "palabra");
-		assertEquals("[palabra]", editor.getLinea(1).toString());		
-	}
 	
-	/*path 5*/
-	@Test
-	public void five() throws EmptyCollectionException {
-		editor.leerFichero("path5.txt");
-		String linea1=editor.getLinea(1).toString();
-		editor.sustituirPalabra("palabra", "any");
-		assertEquals(linea1, editor.getLinea(1).toString());
-		
-	}
 	
 	
 	
