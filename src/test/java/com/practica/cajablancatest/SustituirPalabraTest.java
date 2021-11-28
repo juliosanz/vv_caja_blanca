@@ -3,25 +3,20 @@ package com.practica.cajablancatest;
 import static org.junit.Assert.assertTrue;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import java.util.Iterator;
-
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.aggregator.ArgumentAccessException;
 import org.junit.jupiter.params.aggregator.ArgumentsAccessor;
 import org.junit.jupiter.params.provider.CsvSource;
-import org.omg.CORBA.PRIVATE_MEMBER;
 
-import com.cajanegra.AbstractSingleLinkedListImpl;
 import com.cajanegra.EmptyCollectionException;
-import com.cajanegra.SingleLinkedListImpl;
 import com.practica.cajablanca.Editor;
 
 
 public class SustituirPalabraTest {
 
 	private Editor editor= new Editor();
-	private static final String SOURCE_PATH = "./src/test/misc/SustituirPalabraTest/";
+    private static final String SOURCE_PATH = TestUtils.ROOT_PATH + "SustituirPalabraTest/";
 	
 	/*path 1*/
 	@Test

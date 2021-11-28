@@ -14,7 +14,7 @@ import com.practica.cajablanca.Editor;
 public class MayorLongitudTest {
 
   private static Editor editor;
-  private static final String SOURCE_PATH = "./src/test/misc/mayorLongitud/";
+  private static final String SOURCE_PATH = TestUtils.ROOT_PATH + "mayorLongitud/";
 
   @BeforeAll
   public static void init() {

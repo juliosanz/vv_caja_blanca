@@ -1,11 +1,11 @@
 package com.practica.cajablancatest;
 
-import org.junit.platform.suite.api.SuiteDisplayName;
 import org.junit.platform.suite.api.SelectPackages;
 import org.junit.platform.suite.api.Suite;
+import org.junit.platform.suite.api.SuiteDisplayName;
 
 @Suite
-@SuiteDisplayName("Práctica Caja Blanca")
+@SuiteDisplayName("Practica Caja Blanca VV 2021")
 @SelectPackages({
 	"com.practica.cajablancatest"
 })

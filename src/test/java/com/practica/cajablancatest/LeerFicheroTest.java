@@ -2,11 +2,6 @@ package com.practica.cajablancatest;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
-
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
@@ -17,7 +12,7 @@ import com.practica.cajablanca.Editor;
 public class LeerFicheroTest {
 
 	static Editor editor;
-	private static final String SOURCE_PATH = "./src/test/misc/LeerFicheroTest/";
+    private static final String SOURCE_PATH = TestUtils.ROOT_PATH + "LeerFicheroTest/";
 	
 	@BeforeAll
 	public static void init()

@@ -15,8 +15,7 @@ import com.practica.cajablanca.Editor;
 public class GetLineaIsEmptyTest {
 
   private static Editor editor;
-  // refactorizar la cte de abajo para centralizarla en otra clase TODO
-  private static final String SOURCE_PATH = "./src/test/misc/mayorLongitud/";
+  private static final String SOURCE_PATH = TestUtils.ROOT_PATH + "mayorLongitud/";
 
   @BeforeEach
   public void init() {

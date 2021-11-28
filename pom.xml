@@ -9,13 +9,13 @@
   <version>0.0.1-SNAPSHOT</version>
 
   <name>CajaBlanca</name>
-  <!-- FIXME change it to the project's website -->
-  <url>http://www.example.com</url>
+  <url>https://github.com/juliosanz/vv_caja_blanca</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
+    <runSuite>**/com/practica/cajablancatest/PracticaCajaBlanca.class</runSuite>
   </properties>
 
 
@@ -72,6 +72,11 @@
         <plugin>
           <artifactId>maven-surefire-plugin</artifactId>
           <version>2.22.1</version>
+          <configuration>
+            <includes>
+                <include>${runSuite}</include>
+            </includes>
+          </configuration>
         </plugin>
         <plugin>
           <artifactId>maven-jar-plugin</artifactId>

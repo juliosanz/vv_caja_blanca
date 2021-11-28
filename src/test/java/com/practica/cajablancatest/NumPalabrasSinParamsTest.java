@@ -15,7 +15,7 @@ import com.practica.cajablanca.Editor;
 public class NumPalabrasSinParamsTest {
 	
 	Editor editor= new Editor();
-	private static final String SOURCE_PATH = "./src/test/misc/numPalabrasSinParams/";
+    private static final String SOURCE_PATH = TestUtils.ROOT_PATH + "numPalabrasSinParams/";
 	
 	@Test
 	public void emptyEditor() {

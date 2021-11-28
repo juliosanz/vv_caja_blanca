@@ -5,20 +5,10 @@ package com.practica.cajablancatest;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
-
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import com.cajanegra.AbstractSingleLinkedListImpl;
-import com.cajanegra.EmptyCollectionException;
 import com.cajanegra.SingleLinkedListImpl;
 import com.practica.cajablanca.Editor;
 
@@ -28,7 +18,7 @@ public class NumPalabrasTest {
 	
 	static Editor editor;
 	static SingleLinkedListImpl<String> unElemento;
-	private static final String SOURCE_PATH = "./src/test/misc/NumPalabrasTest/";
+    private static final String SOURCE_PATH = TestUtils.ROOT_PATH + "NumPalabrasTest/";
 	
 	@BeforeAll
 	public static void init()
